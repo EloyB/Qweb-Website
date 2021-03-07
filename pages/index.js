@@ -9,6 +9,9 @@ export default function Home() {
   const router = useRouter();
   return (
     <div>
+      <Head>
+        <title>Qweb Design | Launch to the world wide web</title>
+      </Head>
       <div className="h-screen max-w-screen-xl m-auto">
         <div className="pt-20 pb-32 px-10 sm:px-20 relative z-20">
           <div className="py-6">
@@ -48,9 +51,7 @@ export default function Home() {
       <div className="py-36 px-10 max-w-screen-xl m-auto sm:px-20">
         <MainSection
           title="Let's get designing together"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi phasellus ultrices cursus
-            felis velit. Molestie quisque enim sodales egestas sed aliquam amet, pellentesque.
-            Faucibus est tristique orci, enim, lacinia."
+          description="Out of experience we know that with a good design, big things can be accomplished. Together we will design a website that totally suits your needs and expectations. Starting with simple mockups and ending with fully functional designs so you already have an idea how the finished product will look and feel."
           icon={
             <svg
               className="w-6 h-6 text-primary lg:w-10 lg:h-10"
@@ -65,9 +66,7 @@ export default function Home() {
         <MainSection
           reverse
           title="We write the code"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi phasellus ultrices cursus
-            felis velit. Molestie quisque enim sodales egestas sed aliquam amet, pellentesque.
-            Faucibus est tristique orci, enim, lacinia."
+          description="The part where we work our magic. We will pick the best technologies for your project to work with. We will provide you with a testing environment so you can test all the functionalities we already made. This way we can quickly detect problems or changes that have to be made."
           icon={
             <svg
               className="w-6 h-6 text-primary lg:w-10 lg:h-10"
@@ -85,9 +84,7 @@ export default function Home() {
         />
         <MainSection
           title="Ready for the world wide web"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi phasellus ultrices cursus
-            felis velit. Molestie quisque enim sodales egestas sed aliquam amet, pellentesque.
-            Faucibus est tristique orci, enim, lacinia."
+          description="The end of the ride. Providing you with a fully finished product. Putting it live, providing you with the needed links and support when needed. Take a look to see which clients we already made happy with their finished product."
           icon={
             <svg
               className="w-6 h-6 text-primary lg:w-10 lg:h-10"
