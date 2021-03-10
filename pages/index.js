@@ -4,6 +4,24 @@ import MainSection from "../components/mainsection";
 import SubSection from "../components/subsection";
 import Contactform from "../components/contactform";
 import { useRouter } from "next/router";
+import DefaultSeo from "../components/defaultSeo";
+
+const defaultSeo = {
+  title: "Qweb Design | Launch to the world wide web",
+  description:
+    "A Belgian based company with an expertise in web design. Designing and developing your websites.",
+  ogTitle: "Qweb Design | Launch to the world wide web",
+  ogDescription:
+    "A Belgian based company with an expertise in web design. Designing and developing your websites.",
+  ogUrl: "https://www.qwebdesign.be/",
+  ogImage: "https://www.qwebdesign.be/banner.png",
+  ogType: "website",
+  twitterTitle: "Qweb Design | Launch to the world wide web",
+  twitterDescription:
+    "A Belgian based company with an expertise in web design. Designing and developing your websites.",
+  twitterUrl: "https://www.qwebdesign.be/",
+  twitterImage: "https://www.qwebdesign.be/banner.png",
+};
 
 export default function Home() {
   const router = useRouter();
@@ -12,6 +30,7 @@ export default function Home() {
       <Head>
         <title>Qweb Design | Launch to the world wide web</title>
       </Head>
+      <DefaultSeo {...defaultSeo} />
       <div className="h-screen max-w-screen-xl m-auto">
         <div className="pt-20 pb-32 px-10 sm:px-20 relative z-20">
           <div className="py-6">
