@@ -187,8 +187,8 @@ export default function Home() {
           </div>
         </div>
         <div className="pt-40 pb-10 px-8 md:flex lg:max-w-screen-xl lg:m-auto">
-          <div className="w-full md:pr-8 space-y-5">
-            <h1 className="font-extrabold text-4xl text-white text-center md:text-left sm:text-4xl md:text-5xl md:leading-tight md:pt-5 lg:text-6xl xl:text-7xl">
+          <div className="w-full md:pr-8">
+            <h1 className="font-extrabold text-4xl text-white mb-3 text-center md:text-left sm:text-4xl md:text-5xl md:leading-tight md:pt-5 lg:text-6xl xl:text-7xl">
               Let's <span className="text-primary">link up</span>
             </h1>
             <p className="text-white text-center font-light md:text-left">
