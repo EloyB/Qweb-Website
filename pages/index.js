@@ -5,7 +5,8 @@ import SubSection from "../components/subsection";
 import Contactform from "../components/contactform";
 import { useRouter } from "next/router";
 import DefaultSeo from "../components/defaultSeo";
-import { activeLocale } from "../locale/translation";
+import { activeLocale, toggleLocale } from "../locale/translation";
+import parse from "html-react-parser";
 
 const defaultSeo = {
   title: "Qweb Design | Launch to the world wide web",
@@ -41,16 +42,16 @@ export default function Home() {
             <Logo />
           </div>
           <h1 className="font-extrabold text-3xl text-secondary mb-3 sm:text-4xl md:text-5xl md:leading-tight lg:text-6xl xl:text-7xl">
-            {t.heroSection.title}
+            {parse(t.heroSection.title)}
           </h1>
           <p className="font-light text-lg text-secondary mb-10 mt-10 lg:text-2xl xl:text-3xl">
-            Ready for take off?
+            {t.heroSection.subtitle}
           </p>
           <div
             className="bg-primary hover:bg-primary-dark text-white cursor-pointer w-44 py-3 px-6 rounded-md flex items-center justify-between lg:w-60 lg:text-xl"
             onClick={() => router.push("#launch")}
           >
-            <p>Launch</p> <RocketIcon />
+            <p>{t.heroSection.buttonText}</p> <RocketIcon />
           </div>
         </div>
         <div className="hidden sm:block absolute px-5 bottom-20 w-full max-w-2xl transform left-1/2 -translate-x-1/2 sm:w-3/4 md:left-auto md:right-0 md:-translate-x-px md:bottom-10 xl:right-40">
@@ -60,11 +61,10 @@ export default function Home() {
       <div id="launch" className="bg-secondary w-full pt-24 pb-24">
         <div className="px-10 text-center relative sm:px-20">
           <h1 className="text-white font-extrabold text-4xl sm:text-5xl lg:text-6xl">
-            We Are <span className="text-primary">Qweb</span>
+            {parse(t.bannerSection.title)}
           </h1>
           <p className="text-white font-light text-base mt-4 pb-24 max-w-screen-sm m-auto lg:text-xl">
-            A Belgian based company with an expertise in web design. Designing and developing your
-            websites.
+            {t.bannerSection.subtitle}
           </p>
           <div className="absolute w-2/3 max-w-xs md:-bottom-52 transform left-1/2 -translate-x-1/2 -bottom-40 sm:w-2/5 sm:-bottom-36">
             <MiddleIllustration />
@@ -73,8 +73,8 @@ export default function Home() {
       </div>
       <div className="py-36 px-10 max-w-screen-xl m-auto sm:px-20">
         <MainSection
-          title="Let's get designing together"
-          description="Out of experience we know that with a good design, big things can be accomplished. Together we will design a website that totally suits your needs and expectations. Starting with simple mockups and ending with fully functional designs so you already have an idea how the finished product will look and feel."
+          title={t.infoSection.title1}
+          description={t.infoSection.subtitle1}
           icon={
             <svg
               className="w-6 h-6 text-primary lg:w-10 lg:h-10"
@@ -88,8 +88,8 @@ export default function Home() {
         />
         <MainSection
           reverse
-          title="We write the code"
-          description="The part where we work our magic. We will pick the best technologies for your project to work with. We will provide you with a testing environment so you can test all the functionalities we already made. This way we can quickly detect problems or changes that have to be made."
+          title={t.infoSection.title2}
+          description={t.infoSection.subtitle2}
           icon={
             <svg
               className="w-6 h-6 text-primary lg:w-10 lg:h-10"
@@ -106,8 +106,8 @@ export default function Home() {
           }
         />
         <MainSection
-          title="Ready for the world wide web"
-          description="The end of the ride. Providing you with a fully finished product. Putting it live, providing you with the needed links and support when needed. Take a look to see which clients we already made happy with their finished product."
+          title={t.infoSection.title3}
+          description={t.infoSection.subtitle3}
           icon={
             <svg
               className="w-6 h-6 text-primary lg:w-10 lg:h-10"
@@ -135,8 +135,8 @@ export default function Home() {
           <div>
             <div className="space-y-20 flex flex-col lg:flex-row lg:space-y-0 lg:space-x-20">
               <SubSection
-                title="SEO"
-                description="Having a website is one thing, getting it on top of the Google search results is something else. That's what we call SEO. We will optimize your website to be found according to the most usefull keywords."
+                title={t.moreSection.seo.title}
+                description={t.moreSection.seo.description}
                 icon={
                   <svg
                     className="w-6 h-6 text-white lg:w-10 lg:h-10"
@@ -154,8 +154,8 @@ export default function Home() {
                 }
               />
               <SubSection
-                title="Analytics & Ads"
-                description="Knowing how many users you get on your website and learning from that is like a bit of magic. Combining that with Google ads makes your website very powerfull amongst others. Let us find the best ad campaigns together!"
+                title={t.moreSection.analytics.title}
+                description={t.moreSection.analytics.description}
                 icon={
                   <svg
                     className="w-6 h-6 text-white lg:w-10 lg:h-10"
@@ -168,8 +168,8 @@ export default function Home() {
                 }
               />
               <SubSection
-                title="Hosting"
-                description="A website needs to be hosted somewhere so it can actually be put on the web. Paired with this comes a domainname. We can provide the both for you!"
+                title={t.moreSection.hosting.title}
+                description={t.moreSection.hosting.description}
                 icon={
                   <svg
                     className="w-6 h-6 text-white lg:w-10 lg:h-10"
@@ -187,31 +187,34 @@ export default function Home() {
           </div>
         </div>
         <div className="pt-40 pb-10 px-8 md:flex lg:max-w-screen-xl lg:m-auto">
-          <div className="w-full md:pr-8">
-            <h1 className="font-extrabold text-4xl text-white mb-3 text-center md:text-left sm:text-4xl md:text-5xl md:leading-tight md:pt-5 lg:text-6xl xl:text-7xl">
-              Let's <span className="text-primary">link up</span>
+          <div className="w-full space-y-5 md:pr-8">
+            <h1 className="font-extrabold text-4xl text-white text-center md:text-left sm:text-4xl md:text-5xl md:leading-tight md:pt-5 lg:text-6xl xl:text-7xl">
+              {parse(t.contactSection.title)}
             </h1>
             <p className="text-white text-center font-light md:text-left">
-              Feel free to ask all your question or follow us on social media to keep updated about
-              out work
+              {t.contactSection.description}
             </p>
             <div className="flex space-x-5 items-center">
-              <svg
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                className="text-white opacity-70 w-5 h-5 md:w-7 md:h-7"
-              >
-                <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z" />
-              </svg>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                className="text-white opacity-70 w-5 h-5 md:w-7 md:h-7"
-              >
-                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-              </svg>
+              <a href="https://www.instagram.com/qwebdesign_be/">
+                <svg
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  className="text-white opacity-70 w-5 h-5 md:w-7 md:h-7 hover:text-primary hover:opacity-100"
+                >
+                  <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z" />
+                </svg>
+              </a>
+              <a href="https://www.facebook.com/qwebdesignBE">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="text-white opacity-70 w-5 h-5 md:w-7 md:h-7 hover:text-primary hover:opacity-100"
+                >
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                </svg>
+              </a>
             </div>
           </div>
           <div className="mt-10 sm:px-16 md:px-0 md:mt-0 md:w-full">
@@ -222,9 +225,23 @@ export default function Home() {
           <div>
             <p className="text-sm text-white opacity-70"> &#169; Qweb Design 2021</p>
           </div>
-          <div className="flex divide-x-2 space-x-2 text-white opacity-70">
-            <p className="cursor-pointer ">NL</p>
-            <p className="cursor-pointer pl-2">ENG</p>
+          <div className="flex divide-x-2 space-x-2 ">
+            <p
+              className={`cursor-pointer ${
+                locale === "nl" ? "text-primary" : "text-white opacity-70"
+              }`}
+              onClick={() => toggleLocale("nl", router)}
+            >
+              NL
+            </p>
+            <p
+              className={`cursor-pointer pl-2 ${
+                locale === "en-US" ? "text-primary" : "text-white opacity-70"
+              }`}
+              onClick={() => toggleLocale("en-US", router)}
+            >
+              ENG
+            </p>
           </div>
         </div>
       </div>
