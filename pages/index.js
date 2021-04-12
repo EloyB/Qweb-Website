@@ -17,13 +17,13 @@ const defaultSeo = {
   ogDescription:
     "A Belgian based company with an expertise in web design. Designing and developing your websites.",
   ogUrl: "https://www.qwebdesign.be/",
-  ogImage: "https://www.qwebdesign.be/banner.png",
+  ogImage: "https://www.qwebdesign.be/banner-blue.png",
   ogType: "website",
   twitterTitle: "Qweb Design | Launch to the world wide web",
   twitterDescription:
     "A Belgian based company with an expertise in web design. Designing and developing your websites.",
   twitterUrl: "https://www.qwebdesign.be/",
-  twitterImage: "https://www.qwebdesign.be/banner.png",
+  twitterImage: "https://www.qwebdesign.be/banner-blue.png",
 };
 
 export default function Home() {
