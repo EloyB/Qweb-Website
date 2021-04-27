@@ -7,7 +7,7 @@ export default function MainSection({ icon, title, description, reverse }) {
         reverse ? "items-end text-right" : "items-start text-left"
       }`}
     >
-      <div className="w-14 h-14 rounded-full bg-primary bg-opacity-50 flex items-center justify-center lg:w-20 lg:h-20">
+      <div className="w-14 h-14 rounded-full bg-gray-500 bg-opacity-20 flex items-center justify-center lg:w-20 lg:h-20">
         {icon}
       </div>
       <h1 className="text-2xl font-extrabold text-secondary my-4 sm:text-3xl lg:text-4xl">

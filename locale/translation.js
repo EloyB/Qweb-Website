@@ -13,9 +13,9 @@ const enUS = {
     buttonText: "Launch",
   },
   bannerSection: {
-    title: "We Are <span class='text-primary'>Qweb</span>",
+    title: "We are <span class='text-primary'>Qweb</span>",
     subtitle:
-      "A Belgian based company with an expertise in web design. Designing and developing your websites.",
+      "A Belgian based company with an expertise in web and application development. Designing and developing your business solutions!",
   },
   infoSection: {
     title1: "Design together",
@@ -67,9 +67,9 @@ const nl = {
     buttonText: "Lanceer",
   },
   bannerSection: {
-    title: "Wij Zijn <span class='text-primary'>Qweb</span>",
+    title: "Wij zijn <span class='text-primary'>Qweb</span>",
     subtitle:
-      "Een belgisch bedrijf met een expertise in web design. Ontwerpen en ontwikkelen van jouw websites",
+      "Een Kempisch bedrijf met een expertise in web en applicatie development. Wij ontwerpen en ontwikkelen jouw business oplossing!",
   },
   infoSection: {
     title1: "Samen ontwerpen",
@@ -78,9 +78,9 @@ const nl = {
     subtitle1:
       "Een goed ontwerp is het begin van een geweldige website. Samen met jou ontwerpen we een website die helemaal voldoet aan jouw eisen en verwachtingen. Beginnend met simpele proefmodellen en eindigend met een volledig functioneel ontwerp zodat je al een idee kan krijgen hoe de website er op het einde uit zal zien en zal werken.",
     subtitle2:
-      "Het deel waar wij onze magie laten werken. Wij zullen voor jou project de beste technologien kiezen om mee te werken. Wij voorzien jou van een test omgeving waar jij al de functionaliteiten die al gemaakt zijn grondig kan testen. Op deze manier kunnen we snel problemen detecteren of verbeteringen aanbrengen.",
+      "Het deel waar wij onze magie laten werken. Wij kiezen voor jouw project de beste technologiën en voorzien jou van een test omgeving. hier kan je de functionaliteiten die al gemaakt zijn grondig kan testen. Op deze manier kunnen we snel problemen detecteren of verbeteringen aanbrengen.",
     subtitle3:
-      "Het einde van de rit. Wij leveren jou een volledig afgewerkt product af. Wij zetten, indien u dit wenst, de website online en bezorgen u al de nodige informatie en ondersteuning die nodig is. Neem zeker een kijkje op onze instagram pagina om enkele van onze afgewerkte producten te zien.",
+      "Het einde van de rit. Wij leveren jou een volledig afgewerkt product af. Indien jij dit wenst, zetten wij de website online voor jou. Neem zeker een kijkje op onze instagram pagina om enkele van onze afgewerkte producten te zien.",
   },
   moreSection: {
     title: "Maar wacht... er is <span class='text-primary'>meer!</span>",
@@ -98,7 +98,7 @@ const nl = {
     hosting: {
       title: "Hosting",
       description:
-        "Een website kan niet zomaar online komen te staan. Dit wordt gedaan via hosting. Dit gaat gepaard met een domeinnaam zodat mensen je website vinden via de door jou gekozen link. Ook dit kunnen wij voorzien.",
+        "Een website kan niet zomaar online komen te staan. Dit wordt gedaan via hosting. Dit gaat gepaard met een domeinnaam zodat mensen je website vinden via de door jouw gekozen link. Ook dit kunnen wij voorzien.",
     },
   },
   contactSection: {
