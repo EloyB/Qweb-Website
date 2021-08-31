@@ -169,4 +169,48 @@ export default {
       ],
     },
   },
+  teamPage: {
+    title: "Meet the team",
+    description:
+      "A team of two. A combination of both business, design and development",
+    members: [
+      {
+        name: "Eloy Boone",
+        functions: ["Founder", "Designer", "Developer"],
+        socialLinks: {
+          facebook: "",
+          instagram: "",
+          mail: "",
+        },
+      },
+      {
+        name: "Lorenz Cleymans",
+        functions: ["Founder", "Business", "Developer"],
+        socialLinks: {
+          facebook: "",
+          instagram: "",
+          mail: "",
+        },
+      },
+    ],
+  },
+  footer: {
+    companySection: {
+      title: "The Company",
+      pages: [
+        { title: "Home", link: "/" },
+        { title: "The Team", link: "/" },
+        { title: "Contact", link: "/" },
+      ],
+    },
+    servicesSection: {
+      title: "Our Services",
+      pages: [
+        { title: "Websites", link: "/" },
+        { title: "Web Apps", link: "/" },
+        { title: "Mobile Apps", link: "/" },
+      ],
+    },
+    languages: "Languages",
+  },
 };

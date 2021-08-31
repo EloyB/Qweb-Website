@@ -168,4 +168,48 @@ export default {
       ],
     },
   },
+  teamPage: {
+    title: "Maak kennis met ons team",
+    description:
+      "Een team van 2. Een combinatie van zowel business, design en ontwikkeling.",
+    members: [
+      {
+        name: "Eloy Boone",
+        functions: ["Founder", "Designer", "Developer"],
+        socialLinks: {
+          facebook: "",
+          instagram: "",
+          mail: "",
+        },
+      },
+      {
+        name: "Lorenz Cleymans",
+        functions: ["Founder", "Business", "Developer"],
+        socialLinks: {
+          facebook: "",
+          instagram: "",
+          mail: "",
+        },
+      },
+    ],
+  },
+  footer: {
+    companySection: {
+      title: "The Company",
+      pages: [
+        { title: "Home", link: "/" },
+        { title: "The Team", link: "/" },
+        { title: "Contact", link: "/" },
+      ],
+    },
+    servicesSection: {
+      title: "Our Services",
+      pages: [
+        { title: "Websites", link: "/" },
+        { title: "Web Apps", link: "/" },
+        { title: "Mobile Apps", link: "/" },
+      ],
+    },
+    languages: "Talen",
+  },
 };

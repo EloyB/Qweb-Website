@@ -1,13 +1,14 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import { useRouter } from "next/router";
-import DefaultSeo from "../components/defaultSeo";
+import DefaultSeo from "../components/General/defaultSeo";
 import { activeLocale, toggleLocale } from "../locale/translation";
 import parse from "html-react-parser";
 import PrimaryButton from "../components/Buttons/PrimaryButton";
 import { BiRocket } from "react-icons/bi";
 import LinkCard from "../components/Cards/LinkCard";
 import TeamMemberCard from "../components/Cards/TeamMemberCard";
+import WhyCodeDisclosure from "../components/Others/WhyCodeDisclosure";
 
 const defaultSeo = {
   title: "Qweb Design | Launch to the world wide web",
@@ -80,6 +81,7 @@ export default function Home() {
         <div className="space-y-5">
           {t.homePage.serviceSection.cardsSection.map((item, index) => (
             <LinkCard
+              key={index}
               title={item.title}
               description={item.description}
               icon={item.icon}
@@ -90,11 +92,13 @@ export default function Home() {
         </div>
       </div>
       <div className="bg-secondary pt-12 space-y-14">
-        <div className="max-w-screen-xl m-auto px-6">
+        <div className="max-w-screen-xl m-auto px-6 space-y-6">
           <h1 className="text-white font-extrabold text-4xl sm:text-5xl lg:text-6xl">
             {parse(t.homePage.whyCodeSection.title)}
           </h1>
-          <div>{/* Accordeon */}</div>
+          <div>
+            <WhyCodeDisclosure />
+          </div>
         </div>
         <div className="px-6 space-y-5">
           <div className="space-y-2">
@@ -110,32 +114,6 @@ export default function Home() {
             label="Hit us up!"
             icon={<BiRocket className="text-white w-4 h-4" />}
           />
-        </div>
-        <div className="mx-8 md:px-8 space-y-5 flex-col md:flex-row lg:max-w-screen-xl lg:m-auto border-t-2 border-secondary-light py-10 flex items-center justify-between">
-          <div>
-            <p className="text-sm text-white opacity-70">
-              {" "}
-              &#169; Qweb Design 2021
-            </p>
-          </div>
-          <div className="flex divide-x-2 space-x-2 ">
-            <p
-              className={`cursor-pointer ${
-                locale === "nl" ? "text-primary" : "text-white opacity-70"
-              }`}
-              onClick={() => toggleLocale("nl", router)}
-            >
-              NL
-            </p>
-            <p
-              className={`cursor-pointer pl-2 ${
-                locale === "en-US" ? "text-primary" : "text-white opacity-70"
-              }`}
-              onClick={() => toggleLocale("en-US", router)}
-            >
-              ENG
-            </p>
-          </div>
         </div>
       </div>
     </div>
