@@ -9,8 +9,8 @@ const inputThemeClasses = (variant) =>
 
 const labelThemeClasses = (variant) =>
   classNames({
-    "bg-white text-primary text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2.5": !variant,
-    "text-gray-400 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2.5": variant,
+    "bg-white text-primary text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-4": !variant,
+    "text-gray-400 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-4": variant,
   });
 
 export default function Input({ placeholder, dark, onChange }) {
@@ -19,7 +19,7 @@ export default function Input({ placeholder, dark, onChange }) {
       <input
         id={placeholder}
         type="text"
-        className={`peer w-full py-2 px-3 rounded-xl ${inputThemeClasses(
+        className={`peer w-full py-4 px-3 rounded-xl ${inputThemeClasses(
           dark
         )}`}
         placeholder={placeholder}
@@ -30,7 +30,7 @@ export default function Input({ placeholder, dark, onChange }) {
           dark
         )}`}
       >
-        Email address
+        {placeholder}
       </label>
     </div>
   );

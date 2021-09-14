@@ -9,8 +9,8 @@ const textAreaThemeClasses = (variant) =>
 
 const labelThemeClasses = (variant) =>
   classNames({
-    "bg-white text-primary text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2.5": !variant,
-    "text-gray-400 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2.5": variant,
+    "bg-white text-primary text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-3.5": !variant,
+    "text-gray-400 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-3.5": variant,
   });
 
 export default function TextArea({ placeholder, dark, onChange }) {
@@ -18,10 +18,10 @@ export default function TextArea({ placeholder, dark, onChange }) {
     <div className="relative">
       <textarea
         id={placeholder}
-        className={`peer py-2 px-3 rounded-xl resize-none ${textAreaThemeClasses(
+        className={`peer w-full py-4 px-3 rounded-xl resize-none ${textAreaThemeClasses(
           dark
         )}`}
-        rows={2}
+        rows={4}
         placeholder={placeholder}
       />
       <label
@@ -30,7 +30,7 @@ export default function TextArea({ placeholder, dark, onChange }) {
           dark
         )}`}
       >
-        Email address
+        {placeholder}
       </label>
     </div>
   );

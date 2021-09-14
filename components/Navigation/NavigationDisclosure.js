@@ -96,7 +96,7 @@ export default function NavigationDisclosure({ onClick }) {
                     <span>The Team</span>
                   </a>
                 </Link>
-                <Link href="/">
+                <Link href="/contact">
                   <a
                     onClick={onClick}
                     className="flex items-center space-x-3 mt-4"

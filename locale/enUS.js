@@ -1,6 +1,9 @@
 import { CgBrowser } from "react-icons/cg";
 import { RiDashboardLine } from "react-icons/ri";
 import { GoDeviceMobile } from "react-icons/go";
+import { BiDollar, BiTimer, BiEditAlt, BiSearchAlt } from "react-icons/bi";
+import { IoAnalytics } from "react-icons/io5";
+import { SiGoogleads } from "react-icons/si";
 
 export default {
   homePage: {
@@ -82,16 +85,19 @@ export default {
           title: "Cheaper",
           description:
             "We already designed a few templates for you to choose from so we can deliver faster and still give it a look and feel you like",
+          icon: <BiDollar className="text-white w-6 h-6" />,
         },
         {
           title: "Faster",
           description:
             "We already designed a few templates for you to choose from so we can deliver faster and still give it a look and feel you like",
+          icon: <BiTimer className="text-white w-6 h-6" />,
         },
         {
           title: "Customizable",
           description:
             "We already designed a few templates for you to choose from so we can deliver faster and still give it a look and feel you like",
+          icon: <BiEditAlt className="text-white w-6 h-6" />,
         },
       ],
     },
@@ -109,16 +115,20 @@ export default {
           title: "SEO",
           description:
             "The next step is getting that website on top of the search results and easy to be found by everybody. We got you covered on that as well.",
+
+          icon: <BiSearchAlt className="text-white w-6 h-6" />,
         },
         {
           title: "Analytics",
           description:
             "The next step is getting that website on top of the search results and easy to be found by everybody. We got you covered on that as well.",
+          icon: <IoAnalytics className="text-white w-6 h-6" />,
         },
         {
           title: "Ads",
           description:
             "The next step is getting that website on top of the search results and easy to be found by everybody. We got you covered on that as well.",
+          icon: <SiGoogleads className="text-white w-6 h-6" />,
         },
       ],
     },
@@ -191,6 +201,27 @@ export default {
           instagram: "",
           mail: "",
         },
+      },
+    ],
+  },
+  contactPage: {
+    title: "Let's get in touch!",
+    selectionSection: [
+      {
+        title: "Websites",
+        icon: <CgBrowser className="h-8 w-8 text-white" />,
+      },
+      {
+        title: "Web Apps",
+        icon: <RiDashboardLine className="h-8 w-8 text-white" />,
+      },
+      {
+        title: "Mobile Apps",
+        icon: <GoDeviceMobile className="h-8 w-8 text-white" />,
+      },
+      {
+        title: "Others",
+        icon: <CgBrowser className="h-8 w-8 text-white" />,
       },
     ],
   },

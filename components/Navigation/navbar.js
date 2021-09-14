@@ -4,7 +4,7 @@ import { CgMenuRightAlt } from "react-icons/cg";
 import { IoClose } from "react-icons/io5";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import NavigationDisclosure from "../Navigation/NavigationDisclosure";
+import NavigationDisclosure from "./NavigationDisclosure";
 
 export default function Navbar() {
   const router = useRouter();

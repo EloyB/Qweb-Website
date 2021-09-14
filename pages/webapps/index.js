@@ -11,7 +11,7 @@ export default function index() {
 
   return (
     <div>
-      <div className="h-screen max-w-screen-xl m-auto">
+      <div className="max-w-screen-xl m-auto">
         <div className="pt-28 pb-10 px-6 sm:px-20 relative z-20">
           <h1 className="font-extrabold text-4xl text-secondary mb-3 sm:text-4xl md:text-5xl md:leading-tight lg:text-6xl xl:text-7xl">
             {parse(t.webappsPage.heroSection.title)}
