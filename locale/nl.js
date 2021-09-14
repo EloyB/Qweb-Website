@@ -203,6 +203,27 @@ export default {
       },
     ],
   },
+  contactPage: {
+    title: "Let's get in touch!",
+    selectionSection: [
+      {
+        title: "Websites",
+        icon: <CgBrowser className="h-8 w-8 text-white" />,
+      },
+      {
+        title: "Web Apps",
+        icon: <RiDashboardLine className="h-8 w-8 text-white" />,
+      },
+      {
+        title: "Mobile Apps",
+        icon: <GoDeviceMobile className="h-8 w-8 text-white" />,
+      },
+      {
+        title: "Others",
+        icon: <CgBrowser className="h-8 w-8 text-white" />,
+      },
+    ],
+  },
   footer: {
     companySection: {
       title: "The Company",
