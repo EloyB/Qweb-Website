@@ -20,7 +20,7 @@ export default function index() {
             {t.webappsPage.heroSection.description}
           </p>
         </div>
-        <div className="absolute px-5 bottom-5 sm:bottom-20 w-full max-w-2xl transform left-1/2 -translate-x-1/2 sm:w-3/4 md:left-auto md:right-0 md:-translate-x-px md:bottom-10 xl:right-40">
+        <div className="relative px-5 bottom-5 sm:bottom-20 w-full max-w-2xl transform left-1/2 -translate-x-1/2 sm:w-3/4 md:left-auto md:right-0 md:-translate-x-px md:bottom-10 xl:right-40">
           <img
             src="/websites.svg"
             className="w-full"

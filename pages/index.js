@@ -9,6 +9,8 @@ import { BiRocket } from "react-icons/bi";
 import LinkCard from "../components/Cards/LinkCard";
 import TeamMemberCard from "../components/Cards/TeamMemberCard";
 import WhyCodeDisclosure from "../components/Others/WhyCodeDisclosure";
+import Input from "../components/Inputs/Input";
+import TextArea from "../components/Inputs/TextArea";
 
 const defaultSeo = {
   title: "Qweb Design | Launch to the world wide web",
@@ -52,7 +54,7 @@ export default function Home() {
             icon={<BiRocket className="text-white w-4 h-4" />}
           />
         </div>
-        <div className="absolute px-5 bottom-5 sm:bottom-20 w-full max-w-2xl transform left-1/2 -translate-x-1/2 sm:w-3/4 md:left-auto md:right-0 md:-translate-x-px md:bottom-10 xl:right-40">
+        <div className="relative px-5 bottom-5 sm:bottom-20 w-full max-w-2xl transform left-1/2 -translate-x-1/2 sm:w-3/4 md:left-auto md:right-0 md:-translate-x-px md:bottom-10 xl:right-40">
           <img
             src="/top-illustration-blue.svg"
             alt="Launch your business to the world wide web"

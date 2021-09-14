@@ -4,8 +4,12 @@ import IconButton from "../Buttons/IconButton";
 import { FaFacebookSquare, FaInstagram } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { useRouter } from "next/router";
-import { activeLocale } from "../../locale/translation";
+import { activeLocale, toggleLocale } from "../../locale/translation";
 import Link from "next/link";
+import Input from "../Inputs/Input";
+import PrimaryButton from "../Buttons/PrimaryButton";
+import { BiRocket } from "react-icons/bi";
+import ButtonInput from "../Inputs/ButtonInput";
 
 export default function Footer() {
   const router = useRouter();
@@ -28,7 +32,7 @@ export default function Footer() {
             </h1>
             {t.footer.companySection.pages.map((item, index) => (
               <Link href={item.link}>
-                <p className="text-white font-medium">{item.title}</p>
+                <p className="text-white font-medium py-2">{item.title}</p>
               </Link>
             ))}
           </div>
@@ -38,7 +42,7 @@ export default function Footer() {
             </h1>
             {t.footer.servicesSection.pages.map((item, index) => (
               <Link href={item.link}>
-                <p className="text-white font-medium">{item.title}</p>
+                <p className="text-white font-medium py-2">{item.title}</p>
               </Link>
             ))}
           </div>
@@ -61,10 +65,18 @@ export default function Footer() {
           </div>
           <div>
             <h1 className="text-white text-opacity-50 font-medium">
+              Newsletter
+            </h1>
+            <div className="mt-2 space-y-2 flex">
+              <ButtonInput />
+            </div>
+          </div>
+          <div>
+            <h1 className="text-white text-opacity-50 font-medium">
               {t.footer.languages}
             </h1>
             <p
-              className={`cursor-pointer font-medium ${
+              className={`cursor-pointer font-medium py-1 ${
                 locale === "nl" ? "text-primary" : "text-white"
               }`}
               onClick={() => toggleLocale("nl", router)}
@@ -72,7 +84,7 @@ export default function Footer() {
               NL
             </p>
             <p
-              className={`cursor-pointer font-medium ${
+              className={`cursor-pointer font-medium py-1 ${
                 locale === "en-US" ? "text-primary" : "text-white"
               }`}
               onClick={() => toggleLocale("en-US", router)}

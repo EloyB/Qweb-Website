@@ -1,4 +1,5 @@
 module.exports = {
+  mode: "jit",
   purge: ["./pages/**/*.js", "./components/**/*.js"],
   darkMode: false, // or 'media' or 'class'
   theme: {
@@ -9,8 +10,6 @@ module.exports = {
       fontFamily: {
         poppins: "Poppins, sans-serif",
       },
-
-      //BLUE
       colors: {
         primary: "#1E90FF",
         secondary: "#222237",
@@ -18,26 +17,15 @@ module.exports = {
         "primary-dark": "#0081FF",
         green: "#32EC8D",
       },
-
-      // GREEN
-      // colors: {
-      //   primary: "#61C79F",
-      //   secondary: "#183540",
-      //   "secondary-light": "#26434E",
-      //   "primary-dark": "#56B28E",
-      // },
-
-      // ORANGE
-      // colors: {
-      //   primary: "#FDA085",
-      //   secondary: "#4B5558",
-      //   "secondary-light": "#5C676A",
-      //   "primary-dark": "#ED8365",
-      // },
+      transitionProperty: {
+        height: "max-height",
+      },
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      maxHeight: ["hover"],
+    },
   },
   plugins: [],
 };

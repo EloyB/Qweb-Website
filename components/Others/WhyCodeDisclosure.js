@@ -54,6 +54,7 @@ export default function WhyCodeDisclosure() {
                 } w-5 h-5 text-white`}
               />
             </Disclosure.Button>
+
             <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-white">
               Using code we have an endless amount of possibilities. We can
               scale our projects to your needs and don't have to go oversize
