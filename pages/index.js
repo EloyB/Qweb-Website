@@ -2,15 +2,12 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import { useRouter } from "next/router";
 import DefaultSeo from "../components/General/defaultSeo";
-import { activeLocale, toggleLocale } from "../locale/translation";
+import { activeLocale } from "../locale/translation";
 import parse from "html-react-parser";
 import PrimaryButton from "../components/Buttons/PrimaryButton";
 import { BiRocket } from "react-icons/bi";
 import LinkCard from "../components/Cards/LinkCard";
-import TeamMemberCard from "../components/Cards/TeamMemberCard";
 import WhyCodeDisclosure from "../components/Others/WhyCodeDisclosure";
-import Input from "../components/Inputs/Input";
-import TextArea from "../components/Inputs/TextArea";
 
 const defaultSeo = {
   title: "Qweb Design | Launch to the world wide web",
@@ -71,7 +68,7 @@ export default function Home() {
           </p>
         </div>
         <PrimaryButton
-          onClick={() => router.push("/")}
+          onClick={() => router.push("/team")}
           label="Get to know the team!"
           icon={<BiRocket className="text-white w-4 h-4" />}
         />
@@ -112,7 +109,7 @@ export default function Home() {
             </p>
           </div>
           <PrimaryButton
-            onClick={() => router.push("/")}
+            onClick={() => router.push("/contact")}
             label="Hit us up!"
             icon={<BiRocket className="text-white w-4 h-4" />}
           />

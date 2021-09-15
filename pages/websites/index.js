@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useRouter } from "next/router";
 import { activeLocale } from "../../locale/translation";
 import parse from "html-react-parser";
@@ -69,7 +69,7 @@ export default function websites() {
             </p>
           </div>
           <PrimaryButton
-            label="Let's sit together"
+            label="See how we work"
             icon={<FaRegHandshake className="w-6 h-6 text-white" />}
           />
         </div>

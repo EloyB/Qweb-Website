@@ -1,7 +1,13 @@
 import { CgBrowser } from "react-icons/cg";
 import { RiDashboardLine } from "react-icons/ri";
 import { GoDeviceMobile } from "react-icons/go";
-import { BiDollar, BiTimer, BiEditAlt, BiSearchAlt } from "react-icons/bi";
+import {
+  BiDollar,
+  BiTimer,
+  BiEditAlt,
+  BiSearchAlt,
+  BiDotsHorizontalRounded,
+} from "react-icons/bi";
 import { IoAnalytics } from "react-icons/io5";
 import { SiGoogleads } from "react-icons/si";
 
@@ -220,7 +226,7 @@ export default {
       },
       {
         title: "Others",
-        icon: <CgBrowser className="h-8 w-8 text-white" />,
+        icon: <BiDotsHorizontalRounded className="h-8 w-8 text-white" />,
       },
     ],
   },
