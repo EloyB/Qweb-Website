@@ -27,7 +27,7 @@ export default function Navbar() {
     <div
       className={`${
         scrollPoint ? "shadow-md" : "shadow-none"
-      } fixed z-50 bg-white w-full py-6 px-6 `}
+      } fixed z-50 bg-gray-50 w-full py-6 px-6 `}
     >
       <div className="w-full flex justify-between items-center">
         <div>

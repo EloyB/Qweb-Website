@@ -8,11 +8,11 @@ export default function WhyCodeDisclosure() {
       <Disclosure>
         {({ open }) => (
           <>
-            <Disclosure.Button className="flex justify-between w-full p-4 text-sm font-semibold text-left text-white bg-secondary-light rounded-lg focus:outline-none">
-              <span>We are developers</span>
+            <Disclosure.Button className="flex items-center justify-between w-full p-4 text-sm font-semibold text-left text-white bg-secondary-light rounded-lg focus:outline-none">
+              <span className="md:text-xl">We are developers</span>
               <HiChevronUp
                 className={`${
-                  open ? "transform rotate-180" : ""
+                  open ? "" : "transform rotate-180"
                 } w-5 h-5 text-white`}
               />
             </Disclosure.Button>
@@ -27,11 +27,11 @@ export default function WhyCodeDisclosure() {
       <Disclosure as="div" className="mt-2">
         {({ open }) => (
           <>
-            <Disclosure.Button className="flex justify-between w-full p-4 text-sm font-semibold text-left text-white bg-secondary-light rounded-lg focus:outline-none">
-              <span>More control</span>
+            <Disclosure.Button className="flex items-center justify-between w-full p-4 text-sm font-semibold text-left text-white bg-secondary-light rounded-lg focus:outline-none">
+              <span className="md:text-xl">More control</span>
               <HiChevronUp
                 className={`${
-                  open ? "transform rotate-180" : ""
+                  open ? "" : "transform rotate-180"
                 } w-5 h-5 text-white`}
               />
             </Disclosure.Button>
@@ -46,11 +46,11 @@ export default function WhyCodeDisclosure() {
       <Disclosure as="div" className="mt-2">
         {({ open }) => (
           <>
-            <Disclosure.Button className="flex justify-between w-full p-4 text-sm font-semibold text-left text-white bg-secondary-light rounded-lg focus:outline-none">
-              <span>Endless posibilities</span>
+            <Disclosure.Button className="flex items-center justify-between w-full p-4 text-sm font-semibold text-left text-white bg-secondary-light rounded-lg focus:outline-none">
+              <span className="md:text-xl">Endless posibilities</span>
               <HiChevronUp
                 className={`${
-                  open ? "transform rotate-180" : ""
+                  open ? "" : "transform rotate-180"
                 } w-5 h-5 text-white`}
               />
             </Disclosure.Button>

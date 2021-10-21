@@ -12,7 +12,7 @@ export default function templates() {
 
   return (
     <div>
-      <div className="max-w-screen-xl m-auto">
+      <div className="max-w-screen-xl sm:h-screen sm:flex sm:flex-col sm:justify-between m-auto">
         <div className="pt-28 pb-10 px-6 sm:px-20 relative z-20">
           <h1 className="font-extrabold text-4xl text-secondary mb-3 sm:text-4xl md:text-5xl md:leading-tight lg:text-6xl xl:text-7xl">
             {parse(t.templatesPage.heroSection.title)}
@@ -29,7 +29,7 @@ export default function templates() {
           />
         </div>
       </div>
-      <div className="px-6 py-16 space-y-5">
+      <div className="px-6 sm:px-20 py-16 space-y-5">
         <div className="space-y-3">
           <h1 className="font-extrabold text-4xl text-secondary mb-3 sm:text-4xl md:text-5xl md:leading-tight lg:text-6xl xl:text-7xl">
             {parse(t.templatesPage.templatesSection.title)}
@@ -42,7 +42,7 @@ export default function templates() {
           <TemplateCard />
         </div>
       </div>
-      <div className="bg-secondary w-full space-y-14 px-6 py-16">
+      <div className="bg-secondary w-full space-y-14 px-6 sm:px-20 py-16">
         <div className="space-y-5">
           <div className="space-y-3">
             <h1 className="font-extrabold text-4xl text-white mb-3 sm:text-4xl md:text-5xl md:leading-tight lg:text-6xl xl:text-7xl">

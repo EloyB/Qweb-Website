@@ -16,8 +16,8 @@ export default function Footer() {
   const { locale } = router;
   const t = activeLocale(locale);
   return (
-    <div className="bg-secondary px-6 pt-20 pb-12 space-y-6">
-      <div className="space-y-6">
+    <div className="bg-secondary px-6 sm:px-20 md:px-24 pt-20 pb-12 space-y-6">
+      <div className="space-y-6 lg:space-y-0 lg:space-x-6 lg:flex lg:justify-between">
         <Image
           onClick={() => router.push("/")}
           src="/logo.svg"
@@ -25,7 +25,7 @@ export default function Footer() {
           width="40"
           height="40"
         />
-        <div className="space-y-6 text-lg">
+        <div className="space-y-6 text-lg md:space-y-0 md:grid md:grid-cols-2 md:gap-7 lg:grid-cols-3">
           <div>
             <h1 className="text-white text-opacity-50 font-medium">
               {t.footer.companySection.title}

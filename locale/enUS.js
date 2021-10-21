@@ -85,7 +85,7 @@ export default {
     templatesSection: {
       title: "Our <span class='text-primary'>costefficient</span> templates",
       description:
-        "An already designed website. Customizable to your corporate identity.",
+        "An already designed website in need of your content. Customizable to your corporate identity.",
       cardSection: [
         {
           title: "Cheaper",

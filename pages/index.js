@@ -37,8 +37,8 @@ export default function Home() {
         <title>Qweb Design | Launch to the world wide web</title>
       </Head>
       <DefaultSeo {...defaultSeo} />
-      <div className="max-w-screen-xl m-auto">
-        <div className="pt-28 pb-10 px-6 sm:px-20 relative z-20">
+      <div className="sm:h-screen sm:flex sm:flex-col sm:justify-between">
+        <div className="pt-28 pb-10 px-6 sm:px-20 md:px-24 relative z-20">
           <h1 className="font-extrabold text-4xl text-secondary mb-3 sm:text-4xl md:text-5xl md:leading-tight lg:text-6xl xl:text-7xl">
             {parse(t.homePage.heroSection.title)}
           </h1>
@@ -51,19 +51,23 @@ export default function Home() {
             icon={<BiRocket className="text-white w-4 h-4" />}
           />
         </div>
-        <div className="relative px-5 bottom-5 sm:bottom-20 w-full max-w-2xl transform left-1/2 -translate-x-1/2 sm:w-3/4 md:left-auto md:right-0 md:-translate-x-px md:bottom-10 xl:right-40">
+        <div className="relative bottom-5 sm:bottom-10 px-6 sm:px-20 md:px-24 sm:flex sm:justify-end">
           <img
+            className="w-full sm:w-5/6 md:w-4/5 max-w-xl"
             src="/top-illustration-blue.svg"
             alt="Launch your business to the world wide web"
           />
         </div>
       </div>
-      <div id="launch" className="bg-secondary w-full space-y-7 px-6 py-16">
+      <div
+        id="launch"
+        className="bg-secondary w-full space-y-7 px-6 py-16 sm:px-20 md:px-24"
+      >
         <div className="space-y-3">
           <h1 className="text-white font-extrabold text-4xl sm:text-5xl lg:text-6xl">
             {parse(t.homePage.bannerSection.title)}
           </h1>
-          <p className="text-white font-light text-lg max-w-screen-sm m-auto lg:text-xl">
+          <p className="text-white font-light text-lg lg:text-xl">
             {t.homePage.bannerSection.subtitle}
           </p>
         </div>
@@ -73,11 +77,11 @@ export default function Home() {
           icon={<BiRocket className="text-white w-4 h-4" />}
         />
       </div>
-      <div className="py-12 px-6 max-w-screen-xl m-auto space-y-5 sm:px-20">
+      <div className="py-16 px-6 max-w-screen-xl m-auto space-y-5 sm:px-20 md:px-24">
         <h1 className="text-secondary font-extrabold text-4xl sm:text-5xl lg:text-6xl">
           {parse(t.homePage.serviceSection.title)}
         </h1>
-        <div className="space-y-5">
+        <div className="space-y-5 md:space-y-0 md:gap-3 md:grid md:grid-cols-3">
           {t.homePage.serviceSection.cardsSection.map((item, index) => (
             <LinkCard
               key={index}
@@ -90,8 +94,8 @@ export default function Home() {
           ))}
         </div>
       </div>
-      <div className="bg-secondary pt-12 space-y-14">
-        <div className="max-w-screen-xl m-auto px-6 space-y-6">
+      <div className="bg-secondary py-16 space-y-14 px-6 sm:px-20 md:px-24">
+        <div className="max-w-screen-xl m-auto space-y-6">
           <h1 className="text-white font-extrabold text-4xl sm:text-5xl lg:text-6xl">
             {parse(t.homePage.whyCodeSection.title)}
           </h1>
@@ -99,12 +103,12 @@ export default function Home() {
             <WhyCodeDisclosure />
           </div>
         </div>
-        <div className="px-6 space-y-5">
+        <div className="space-y-5">
           <div className="space-y-2">
             <h1 className="text-white font-extrabold text-4xl sm:text-5xl lg:text-6xl">
               {parse(t.homePage.ctoSection.title)}
             </h1>
-            <p className="text-white font-light text-lg max-w-screen-sm m-auto lg:text-xl">
+            <p className="text-white font-light text-lg lg:text-xl">
               {t.homePage.ctoSection.description}
             </p>
           </div>
